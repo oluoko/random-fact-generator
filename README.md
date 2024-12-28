@@ -2,7 +2,8 @@
 
 This repo contains the code for Random Facts Generator websites built using various technologies.
 
-- ##[Python](https://factgen.streamlit.app/)
+- ### [Python](https://factgen.streamlit.app/)
+
   Click [`Here`](https://factgen.streamlit.app/) to go to the demo. You may need to install streamlit first.
 
   - Start by installing [`python3`](https://www.python.org/downloads/) using `apt`
