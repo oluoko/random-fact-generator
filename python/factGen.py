@@ -137,7 +137,16 @@ facts = {
     ]
 }
 
-st.sidebar.radio("Select a category", categories)
+userInput = st.sidebar.radio("Select a category", categories)
 
-st.markdown("Random Fact Generator")
+st.markdown("<h2 style = 'text-align : center'>🔍 Random Fact Generator</h2>", unsafe_allow_html=True)
 st.write("Discover fascinating facts from various categories. Select a category from the sidebar and click the button to uncover a new fact")
+
+st.markdown("<hr style = 'border : 1px solid #ff9285'>", unsafe_allow_html=True)
+st.write(f"Selected category: {userInput}")
+
+if st.button("Get a Random Fact"):
+    with st.spinner("Please Wait..."):
+        getFact = facts[userInput]
+        randomFact = random.choice(getFact)
+        st.markdown(f"<div style = 'border : 1px solid #ff9285 ; margin:10px; padding: 10px; height : 140px; border-radius: 15px'>{randomFact}</div>", unsafe_allow_html=True)
